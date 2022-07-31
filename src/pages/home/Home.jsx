@@ -1,5 +1,4 @@
-import React from "react";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Header from "../../components/header/Header";
 import img1 from "../../assets/1.avif";
 import img2 from "../../assets/2.avif";
@@ -15,8 +14,6 @@ const Home = () => {
   const [allmovies, setAllMovies] = useState([]);
   const [movies, setMovies] = useState([]);
   const [isLoading, setLoading] = useState(false);
-
-  console.log("Helloooooo");
 
   useEffect(() => {
     setLoading(true);
@@ -43,7 +40,7 @@ const Home = () => {
 
   return (
     <div>
-      <Header filterMoviesBySearch={filterMoviesBySearch} />
+      <Header filterMoviesBySearch={filterMoviesBySearch} showSearch={true} />
 
       <ImageCarousel images={[img1, img2, img3, img4]} />
 
